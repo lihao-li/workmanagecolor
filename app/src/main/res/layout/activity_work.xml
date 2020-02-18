@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.WorkActivity">
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/b"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
+            android:padding="10dp"
+            android:text="Confirm"
+            android:textSize="20dp"
+            android:visibility="invisible"
+            />
+
+        <TextView
+            android:id="@+id/Work_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="収穫タスク進捗"
+            android:textColor="@color/text_title"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Work_Confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
+            android:padding="10dp"
+            android:text="titlecolor"
+            android:textColor="@color/text_color"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="60dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@color/date_picker_divider"
+        android:id="@+id/detailed">
+
+        <TextView
+            android:id="@+id/car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="車両番号:"
+            android:textColor="@color/dark" />
+
+        <TextView
+            android:id="@+id/car_name"
+            android:layout_width="match_parent"
+            android:layout_alignTop="@+id/car"
+            android:layout_toEndOf="@+id/car"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="true"
+            android:autoSizeMaxTextSize="15dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="left|center_vertical"
+             />
+
+        <TextView
+            android:id="@+id/field"
+            android:layout_below="@+id/car"
+            android:layout_alignTop="@+id/field_name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/dark"
+            android:text="ほ場名:" />
+
+        <TextView
+            android:id="@+id/field_name1"
+            android:layout_below="@+id/car_name"
+            android:layout_toEndOf="@+id/field"
+            android:layout_alignLeft="@+id/car_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autoSizeMaxTextSize="15dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="left|center_vertical"
+            android:ellipsize="middle"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/add"
+            android:layout_alignLeft="@+id/field"
+            android:layout_below="@+id/field"
+            android:layout_alignTop="@+id/add_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/dark"
+            android:text="住所:" />
+
+        <TextView
+            android:id="@+id/add_name"
+            android:layout_toEndOf="@+id/add"
+            android:layout_alignLeft="@+id/car_name"
+            android:layout_below="@+id/field_name1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autoSizeMaxTextSize="15dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="left|center_vertical"
+            />
+
+        <TextView
+            android:id="@+id/user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/add"
+            android:layout_alignTop="@+id/user_name"
+            android:gravity="left|center_vertical"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="地権者:"
+            android:textColor="@color/dark" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_toEndOf="@+id/user"
+            android:layout_alignLeft="@+id/car_name"
+            android:layout_below="@+id/add_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:autoSizeMaxTextSize="15dp"
+            android:autoSizeTextType="uniform"
+            android:gravity="left|center_vertical"
+            android:ellipsize="middle"
+            android:singleLine="true"  />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/detailed"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:listSelector="#00000000">
+
+        </ListView>
+    </LinearLayout>
+
+</RelativeLayout>

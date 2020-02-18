@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:paddingStart="10dp"
+    android:paddingEnd="5dp"
+    android:paddingTop="1dp"
+    android:paddingBottom="1dp">
+
+    <TextView
+        android:id="@+id/field1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ほ場名称：" />
+
+    <TextView
+        android:id="@+id/field_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/field1"
+        android:textColor="@color/dark"
+        android:textStyle="bold"
+        android:layout_gravity="left"
+        android:gravity="center_vertical"
+        android:autoSizeTextType="uniform"
+        android:paddingStart="5dp"
+        android:text="aaa"
+        android:autoSizeMaxTextSize="17dp"/>
+
+    <TextView
+        android:id="@+id/field2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/field1"
+        android:layout_alignTop="@+id/field_add"
+        android:layout_below="@+id/field1"
+        android:text="住所：" />
+
+    <TextView
+        android:id="@+id/field_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/field_name"
+        android:layout_alignLeft="@+id/field_name"
+        android:layout_gravity="left"
+        android:paddingStart="5dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/dark" />
+
+    <TextView
+        android:id="@+id/field3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/field1"
+        android:layout_alignTop="@+id/field_user"
+        android:layout_below="@+id/field2"
+        android:text="地権者：" />
+
+    <TextView
+        android:id="@+id/field_user"
+        android:layout_below="@+id/field_add"
+        android:layout_alignLeft="@+id/field_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dark"
+        android:layout_gravity="left"
+        android:paddingStart="5dp"
+        />
+
+    <TextView
+        android:id="@+id/field4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/field1"
+        android:layout_alignTop="@+id/field_nfc"
+        android:layout_below="@+id/field3"
+        android:text="NFCID：" />
+
+    <TextView
+        android:id="@+id/field_nfc"
+        android:layout_below="@+id/field_user"
+        android:layout_alignLeft="@+id/field_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dark"
+        android:layout_gravity="left"
+        android:paddingStart="5dp"
+        />
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <View
+        android:id="@+id/view_1"
+        android:layout_width="2dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="30dp"
+        android:background="#ff0000"
+        />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="24dp"
+        android:src="@drawable/ic_ok" />
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="-20dp"
+        android:layout_marginRight="25dp"
+        android:layout_toRightOf="@+id/image"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/item_workprogress_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#1a1a1a"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/item_workprogress_remark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_workprogress_action"
+            android:layout_marginTop="5dp"
+            android:textColor="#8e8e8e"
+            android:textSize="12sp" />
+
+
+        <TextView
+            android:id="@+id/item_workprogress_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="#3dd1a5"
+            android:textSize="14sp"
+            android:drawableRight="@drawable/right1"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

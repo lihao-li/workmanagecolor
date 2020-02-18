@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.DryingBindingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/Input_Cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
+            android:padding="10dp"
+            android:drawableStart="@drawable/before"
+            android:text="取消"
+            android:textColor="@color/titlecolor"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Input_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="荷受情報登録"
+            android:textColor="@color/text_title"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Input_Confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="left|center_vertical"
+            android:padding="10dp"
+            android:text="確定"
+            android:textColor="@color/titlecolor"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/parentPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+       >
+
+        <View
+            android:id="@+id/view1"
+            android:layout_below="@+id/login_head"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="2dp"
+            android:background="@color/dark" />
+
+        <TextView
+            android:id="@+id/t1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view1"
+            android:gravity="center"
+            android:padding="5dip"
+            android:text="入車重量(KG):"
+            android:textColor="@color/dark"
+            android:textSize="17dp" />
+
+        <EditText
+            android:id="@+id/input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/t1"
+            android:layout_toEndOf="@+id/t1"
+            android:layout_below="@id/view1"
+            android:background="@null"
+            android:hint="重量を入力"
+            android:padding="7dp"
+            android:gravity="left|center_vertical"
+            android:textColor="@color/dark"
+            android:textSize="17dp"
+            />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_below="@+id/input"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/dark" />
+
+
+        <View
+            android:id="@+id/view3"
+            android:layout_below="@+id/view2"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/dark" />
+
+        <TextView
+            android:id="@+id/t2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="出車重量(KG):"
+            android:gravity="center"
+            android:padding="5dip"
+            android:layout_below="@+id/view3"
+            android:textColor="@color/dark"
+            android:textSize="17dp"/>
+
+        <EditText
+            android:id="@+id/output"
+            android:layout_width="match_parent"
+            android:layout_below="@id/view3"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/input"
+            android:layout_alignTop="@id/t2"
+            android:background="@null"
+            android:hint="重量を入力"
+            android:padding="7dp"
+            android:gravity="left|center_vertical"
+            android:textColor="@color/dark"
+            android:textSize="17dp"/>
+
+        <View
+            android:id="@+id/view4"
+            android:layout_below="@+id/t2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/dark" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_below="@+id/view4"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/dark" />
+
+        <TextView
+            android:id="@+id/t3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="水分(%):"
+            android:gravity="center"
+            android:padding="5dip"
+            android:layout_below="@+id/view5"
+            android:textColor="@color/dark"
+            android:textSize="17dp"/>
+
+        <EditText
+            android:id="@+id/water"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/input"
+            android:layout_alignTop="@+id/t3"
+            android:background="@null"
+            android:hint="水分を入力"
+            android:padding="7dp"
+            android:gravity="left|center_vertical"
+            android:textColor="@color/dark"
+            android:textSize="17dp" />
+
+        <View
+            android:id="@+id/view6"
+            android:layout_below="@+id/t3"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/dark" />
+
+        <View
+            android:id="@+id/view7"
+            android:layout_below="@+id/view6"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/dark" />
+
+        <TextView
+            android:id="@+id/t4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="荷受重量(KG):"
+            android:gravity="center"
+            android:padding="5dip"
+            android:layout_below="@+id/view7"
+            android:textColor="@color/dark"
+            android:textSize="17dp"/>
+
+        <EditText
+            android:id="@+id/weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="重量を入力"
+            android:layout_alignLeft="@+id/input"
+            android:layout_alignTop="@id/t4"
+            android:padding="7dp"
+            android:gravity="left|center_vertical"
+            android:textColor="@color/dark"
+            android:textSize="17dp"
+            />
+
+        <View
+            android:id="@+id/view8"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/t4"
+            android:background="@color/dark" />
+
+    </RelativeLayout>
+
+</LinearLayout>

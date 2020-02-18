@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        mapbox:mapbox_cameraTargetLat="35.978"
+        mapbox:mapbox_cameraTargetLng="135.923"
+        mapbox:mapbox_cameraZoom="4.4">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="vertical"
+            android:layout_gravity="bottom">
+
+            <TextView
+                android:id="@+id/nav"
+                android:layout_width="50sp"
+                android:layout_height="35sp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="25sp"
+                android:drawableTop="@drawable/nav" />
+
+            <TextView
+                android:id="@+id/local"
+                android:layout_width="50sp"
+                android:layout_height="35sp"
+                android:layout_toEndOf="@+id/nav"
+                android:layout_marginLeft="5sp"
+                android:layout_alignTop="@+id/nav"
+                android:drawableTop="@drawable/loacl" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:drawableTop="@drawable/moons" />
+
+        </RelativeLayout>
+
+    </com.mapbox.mapboxsdk.maps.MapView>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:alpha="0.7"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/Menu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="left|center_vertical"
+                android:padding="10dp"
+                android:text="メニュー"
+                android:textColor="@color/titlecolor"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="作業管理"
+                android:textColor="@color/text_title"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/farm"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="left|center_vertical"
+                android:padding="10dp"
+                android:text="ほ場情報"
+                android:textColor="@color/titlecolor"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>
